@@ -7,6 +7,7 @@ import com.imooc.enums.ShopStateEnum;
 import com.imooc.service.ShopService;
 import com.imooc.util.FileUtil;
 import com.imooc.util.ImageUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
@@ -20,6 +21,7 @@ public class ShopServiceImpl implements ShopService {
         String shopImgAddr = ImageUtil.generateThumbnail(shopImg, dest);
         shop.setShopImg(shopImgAddr);
     }
+    @Autowired
 private ShopDao shopDao;
     @Override
     @Transactional
@@ -46,6 +48,6 @@ private ShopDao shopDao;
         {
             throw new RuntimeException("add shoperror" +e.getMessage());
         }
-        return null;
+        return new ShopExcution(ShopStateEnum.CHECK, shop);
     }
 }
