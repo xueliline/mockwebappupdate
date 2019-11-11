@@ -46,7 +46,8 @@ public class ShopServiceTest extends BaseTest {
 	@Test
 	public void testAddShop() throws Exception {
 		Shop shop = new Shop();
-		shop.setOwnerId(1L);
+		shop.setShopId(1L);
+		shop.setOwnerId(5L);
 		Area area = new Area();
 		area.setAreaId(1L);
 		ShopCategory sc = new ShopCategory();
