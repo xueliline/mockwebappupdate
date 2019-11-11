@@ -1,8 +1,7 @@
-
-<web-app>
+<web-app xmlns:context="http://www.springframework.org/schema/context">
   <display-name>Archetype Created Web Application</display-name>
   <welcome-file-list>
-    <welcome-file></welcome-file>
+    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
     <servlet-name>seckill-dispatcher</servlet-name>
