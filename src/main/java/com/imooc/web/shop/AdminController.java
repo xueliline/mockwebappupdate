@@ -15,8 +15,8 @@ import java.util.Map;
 		RequestMethod.POST })
 public class AdminController {
 
-	@RequestMapping(value = "/test")
-			public String test()
+	@RequestMapping(value = "/getshopinitinfo")
+	public String test()
 	{
 		System.out.println("TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT");
 		return "shop/test";
