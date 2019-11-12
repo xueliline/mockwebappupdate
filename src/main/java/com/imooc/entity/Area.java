@@ -7,6 +7,16 @@ public class Area {
     private Integer priority;
     private Date createTime;
     private Date lastEditTime;
+
+    public String getAreaDesc() {
+        return areaDesc;
+    }
+
+    public void setAreaDesc(String areaDesc) {
+        this.areaDesc = areaDesc;
+    }
+
+    private String areaDesc;
     public Long getAreaId() {
         return areaId;
     }
